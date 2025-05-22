@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project1</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">S</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links" id="mobileMenu">
+        <a href="index.html#Home">HOME</a>
+        <a href="index.htmlt#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="project1">
+    <div class="background-container">
+   <section class="project-page">
+     <div class="project-content">
+      <h1>E-Commerce Website</h1>
+    <div class="project-details">
+     <h2>Project Details</h2>
+      <p>A fully responsive e-commerce website with product listings, shopping cart functionality, and secure checkout process.</p>
+       <ul>
+      <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+      <li><strong>Features:</strong> Product filtering, user authentication, payment integration</li>
+         </ul>
+        <p>This project helped me understand complex state management and API integrations in web development.</p>
+      </div>
+      <a href="index.html" class="button">Back to Portfolio</a>
+    </div>
+    </section>
+    </div>
+  </div>
+
+  <footer class="footer-container">
+    <p><span class="logo">S</span> © 2025 by Sheikh Faraz</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
