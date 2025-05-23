@@ -1,25 +1,43 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+require 'src/Exception.php';
+
+$status = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "sheikhfaraz.euroshub@gmail.com";
-    $subject = "New Contact Form Submission";
+    $mail = new PHPMailer(true);
 
-    $first_name = htmlspecialchars($_POST['first_name']);
-    $last_name = htmlspecialchars($_POST['last_name']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $message = htmlspecialchars($_POST['message']);
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'ali.rayyan001@gmail.com';       // Your Gmail address
+        $mail->Password   = 'egjiherhpokyifeq';              // App password (not your Gmail password)
+        $mail->SMTPSecure = 'tls';
+        $mail->Port       = 587;
 
-    $body = "Name: $first_name $last_name\n";
-    $body .= "Email: $email\n";
-    $body .= "Phone: $phone\n";
-    $body .= "Message:\n$message";
+        // Recipients
+        $mail->setFrom($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
+        $mail->addAddress('ali.rayyan001@gmail.com'); // Your Gmail again as recipient
 
-    $headers = "From: $email";
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body    = '
+            <strong>Name:</strong> ' . htmlspecialchars($_POST['first_name']) . ' ' . htmlspecialchars($_POST['last_name']) . '<br>
+            <strong>Email:</strong> ' . htmlspecialchars($_POST['email']) . '<br>
+            <strong>Phone:</strong> ' . htmlspecialchars($_POST['phone']) . '<br>
+            <strong>Message:</strong><br>' . nl2br(htmlspecialchars($_POST['message']));
 
-    if (mail($to, $subject, $body, $headers)) {
+        $mail->send();
         $status = "Your message has been sent successfully!";
-    } else {
-        $status = "Sorry, your message could not be sent.";
+    } catch (Exception $e) {
+        $status = "Sorry, your message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
 ?>
@@ -33,32 +51,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <section id="contact" class="section5">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h1>CONTACT</h1>
-                <p>If you want to talk to me, then please fill out the form</p>
-                <p><a href="mailto:sheikhfaraz.euroshub@gmail.com">sheikhfaraz.euroshub@gmail.com</a></p>
-                <p><a href="tel:+923335747903">Call: +923335747903</a></p>
-                <?php if (!empty($status)) echo "<p class='status'>$status</p>"; ?>
-            </div>
-            <div class="contact-form">
-                <form method="POST" action="">
-                    <div class="name-fields">
-                        <input type="text" name="first_name" placeholder="First name *" required>
-                        <input type="text" name="last_name" placeholder="Last name *" required>
-                    </div>
-                    <input type="email" name="email" placeholder="Email *" required>
-                    <input type="text" name="phone" placeholder="Phone">
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form method="post" action="contact.php">
+                <input type="text" name="first_name" placeholder="First Name" required><br>
+                <input type="text" name="last_name" placeholder="Last Name" required><br>
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="text" name="phone" placeholder="Phone"><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+            </form>
+            <?php if (!empty($status)) echo "<p>$status</p>"; ?>
         </div>
     </section>
-
-    <footer class="footer-container">
-        <div class="logo">S</div>
-        <p>© 2035 by Sheikh Faraz. Powered and secured by my PC</p>
-    </footer>
 </body>
 </html>
