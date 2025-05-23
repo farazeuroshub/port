@@ -410,11 +410,14 @@ footer .logo {
     font-size: 28px;
     background-attachment: scroll;
   }
-.section5 {
-    padding: 150px 15px;
-    font-size: 20px;
+
+   .section1{
+    padding: 315px 15px;
+    font-size: 28px;
     background-attachment: scroll;
   }
+
+
   .overlap-box {
     width: 90%;
     top: -50px;

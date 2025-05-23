@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="contact-container">
+ 
+    <header>
+        <nav class="navbar">
+            <div class="logo">F</div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+           <a href="index.html#Home">Home</a>
+           <a href="index.htmlt#About">About</a>
+           <a href="index.html#Projects">Projects</a>
+           <a href="index.html#Skills">Skills</a>
+           <a href="index.html#Contact">Contact</a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="contact-container">
         <div class="contact-wrapper">
             <h1 class="contact-heading">Contact Us</h1>
             
             <form action="https://formsubmit.co/sheikhfaraz.euroshub@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Contact Submission">
+                
                 <div class="form-group">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="text" name="name" placeholder="Full Name" required>
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Email Address" required>
@@ -28,15 +47,62 @@
                     <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
                 
-            
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                </button>
             </form>
         </div>
-    </div>
+    </main>
+
+  
+    <footer class="footer-container">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+ 
+    <script>
+   
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+        
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+      
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+
+
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.classList.add('loading');
+            
+        
+            setTimeout(() => {
+                submitBtn.classList.remove('loading');
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                setTimeout(() => {
+                    form.submit();
+                }, 1500);
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
