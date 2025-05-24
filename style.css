@@ -86,7 +86,7 @@ header {
   right: 20px;
 }
  
-.section2, .section3, .section4 {
+.section3, .section4 {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -193,12 +193,8 @@ header {
   }
 }
 
-.section2 {
-  background-image: url(https://www.skillcast.com/hubfs/confident%20busines%20man_1200x627.jpg);
-}
-
-.section3 {
-  background-image: url(https://media.pitchfork.com/photos/638902d5f777c8e284615da3/2:1/w_2560%2Cc_limit/SZA.jpg);
+ .section3 {
+  background-image: url(img3.png.jpg);
   padding-bottom: 150px;
 }
 
@@ -208,7 +204,7 @@ header {
   font-size: 40px;
  }
 
-.section2::before, .section3::before {
+.section3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -231,28 +227,28 @@ header {
 }
 
 .overlap-box {
-  width: 90%; /* More responsive width */
-  max-width: 500px; /* Maximum width */
+  width: 90%; 
+  max-width: 500px; 
   position: absolute;
-  top: -100px; /* Adjusted positioning */
+  top: -100px; 
   left: 50%;
   transform: translateX(-50%);
-  padding: 40px 30px; /* Better padding */
-  background-color: rgba(15, 15, 15, 0.95); /* Richer black */
+  padding: 40px 30px;
+  background-color: rgba(15, 15, 15, 0.95);
   color: white;
   text-align: center;
   z-index: 10;
   font-size: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 12px; /* Smoother corners */
-  backdrop-filter: blur(5px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  border-radius: 12px;
+  backdrop-filter: blur(5px); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   line-height: 1.6;
-  transition: all 0.4s ease; /* Smooth transitions */
+  transition: all 0.4s ease; 
 }
 
 .overlap-box:hover {
-  transform: translateX(-50%) translateY(-5px); /* Lift effect */
+  transform: translateX(-50%) translateY(-5px); 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
@@ -260,11 +256,11 @@ header {
   display: inline-block;
   margin-top: 25px;
   padding: 14px 32px;
-  background-color: #4CAF50; /* Brighter green */
+  background-color: #4CAF50;
   color: white;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px; 
   transition: all 0.3s ease;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -276,7 +272,7 @@ header {
 }
 
 .button:hover {
-  background-color: #45a049; /* Darker green */
+  background-color: #45a049; 
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
 }
@@ -284,8 +280,7 @@ header {
 .button:active {
   transform: translateY(1px);
 }
-
-/* Optional: Add a shine effect on hover */
+ 
 .button::after {
   content: '';
   position: absolute;
@@ -326,40 +321,7 @@ header {
     margin-top: 20px;
     padding: 10px 20px;
   }
-}
-/* .overlap-box {
-  width: 22%;
-  position: absolute;
-  top: -130px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 70px;
-  background-color: rgba(5, 5, 5, 0.8);
-  color: white;
-  text-align: center;
-  z-index: 10;
-  height: auto;
-  font-size: 20px;
-  box-shadow: 0 4px 20px black;
-  border-radius: 8px;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background-color: #30643c;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: darkslategray;
-} */
-
+} 
 .project-container {
   display: flex;
   justify-content: center;
@@ -423,7 +385,7 @@ header {
   background-image: url(https://images.unsplash.com/photo-1542744173-05336fcc7ad4);
 }
 
-/* Skills Styles */
+
 .skills {
   width: 80%;
   margin: 50px auto;
@@ -822,4 +784,4 @@ footer .logo {
     line-height: 1.5;
   }
 }
-
+}
