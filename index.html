@@ -8,24 +8,29 @@
 </head>
 <body>
  <header>
-  <div class="navbar">
-    <!-- <div class="logo">S</div> -->
-     <div> <a href="index.html" class="logo">S</a> </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav class="nav-links" id="mobileMenu">
+   <div class="navbar">
+      <div> <a href="index.html" class="logo">S</a> </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links" id="mobileMenu">
       <a href="#Home">Home</a>
-      <a href="#experience">About</a>
+      <a href="#experience">Experience</a>
       <a href="#portfolio">Projects</a>
       <a href="#skills">Skills</a>
       <a href="contact.html">Contact</a>
+      <a href="#section5">About</a>
     </nav>
   </div>
 </header>
 
-<section id="Home" class="section1">
-  <h1>HELLO</h1>
-  <h1>I'M Sheikh Faraz</h1>
-  <p>I am learning web development.</p>
+<section id="Home" class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="greeting">HELLO</h1>
+      <h1 class="name">I'M Sheikh Faraz</h1>
+      <p class="tagline">I am learning web development.</p>
+    </div>
+    <div class="hero-image"></div>
+  </div>
 </section>
 
 <div class="container">
@@ -69,7 +74,7 @@
     </div>
     <div class="skill">
     <span>JAVASCRIPT</span>
-     <div class="skill-bar"><div class="progress" style="width: 2%;">2%</div></div>
+     <div class="skill-bar"><div class="progress" style="width: 5%;">5%</div></div>
     </div>
     <div class="skill">
     <span>HTML & CSS</span>
@@ -78,8 +83,47 @@
   </div>
 </section>
 
+
+<section class="section5" >
+  <div class="about-container">
+    <div class="about-text">
+      <h1>ABOUT ME</h1>
+      <p>I'm Sheikh Faraz. I love traveling, exploring nature, and learning new things. I have a deep love for nature and trees, which is why my friends and I have planted over 2,000 trees so far.</p>
+    </div>
+    
+    <div class="image-grid">
+      <div class="image-item img1"><img src="img1.png (2).jpg" alt="Hunza Valley"></div>
+      <div class="image-item img2"><img src="img2.png.jpg" alt="Tree plantation work"></div>
+      <div class="image-item img3"><img src="img3.png.jpg" alt="hamushal lake"></div>
+      <div class="image-item img4"><img src="img4.png.jpg" alt="office"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section5">
+  <h1>MY PASSIONS</h1>
+  <div class="passion-container">
+    <div class="passion-item">
+      <h3>Northern Explorer</h3>
+      <p>Hiking</p>
+    </div>
+    <div class="passion-item">
+      <h3> Plantation Worker</h3>
+      <p>Active in tree planting campaigns</p>
+    </div>
+    <div class="passion-item">
+      <h3>Nature Photography</h3>
+      <p>Documenting Pakistan's landscapes and plantation efforts</p>
+    </div>
+    <div class="passion-item">
+      <h3> Web Development</h3>
+      <p>Building projects</p>
+    </div>
+  </div>
+</section>
+
 <footer class="footer-container">
-  <p><div class="logo">S</div> © 2035 by Sheikh Faraz. Powered and secured by my pc</p>
+  <p> © 2035 by Sheikh Faraz. Powered and secured by my pc</p>
 </footer>
 
 <script>
