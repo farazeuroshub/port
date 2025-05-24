@@ -2,130 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
-   <div class="navbar">
+  <header>
+    <div class="navbar">
       <div> <a href="index.html" class="logo">S</a> </div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <nav class="nav-links" id="mobileMenu">
-      <a href="#Home">Home</a>
-      <a href="#experience">Experience</a>
-      <a href="#portfolio">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="contact.html">Contact</a>
-      <a href="#section5">About</a>
-    </nav>
-  </div>
-</header>
-
-<section id="Home" class="hero-section">
-  <div class="hero-container">
-    <div class="hero-content">
-      <h1 class="greeting">HELLO</h1>
-      <h1 class="name">I'M Sheikh Faraz</h1>
-      <p class="tagline">I am learning web development.</p>
+        <a href="#Home">Home</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="contact.html">Contact</a>
+        <a href="#about">About</a> 
+      </nav>
     </div>
-    <div class="hero-image"></div>
+  </header>
+
+  <section id="Home" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="greeting">HELLO</h1>
+        <h1 class="name">I'M Sheikh Faraz</h1>
+        <p class="tagline">I am learning web development.</p>
+      </div>
+      <div class="hero-image"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="overlap-box">
+      <p>I'M Sheikh Faraz i am learning web development.</p>
+      <h2>Download My Resume</h2>
+      <a href="Sheikh_Faraz_CV.pdf" download class="button">Download Resume</a>
+    </div>
   </div>
-</section>
-
-<div class="container">
-  <div class="overlap-box">
-    <p>I'M Sheikh Faraz i am learning web development.</p>
-    <h2>Download My Resume</h2>
-    <a href="Sheikh_Faraz_CV.pdf" download class="button">Download Resume</a>
-  </div>
-</div>
- 
-<section id="portfolio" class="section3">
-  <h1>02 PORTFOLIO</h1>
-  <p>MY LATEST WORK. SEE MORE</p>
-  <div class="project-container">
-    <a href="project1.html" class="box box1"><p>Project 01</p></a>
-    <a href="project2.html" class="box box2"><p>Project 02</p></a>
-    <a href="project3.html" class="box box3"><p>Project 03</p></a>
-  </div>
-</section>
-
-<section id="skills" class="section4">
-  <h1>03 SKILLS</h1>
-  <p>MY KNOWLEDGE LEVEL IN SOFTWARE</p>
-
-  <div class="skills">
-    <div class="skill">
-
   
-    <div class="skill">
-      <span>PHOTOSHOP</span>
-      <div class="skill-bar"><div class="progress" style="width: 30%;">30%%</div></div>
+  <section id="portfolio" class="section3">
+    <h1>02 PORTFOLIO</h1>
+    <p>MY LATEST WORK. SEE MORE</p>
+    <div class="project-container">
+      <a href="project1.html" class="box box1"><p>Project 01</p></a>
+      <a href="project2.html" class="box box2"><p>Project 02</p></a>
+      <a href="project3.html" class="box box3"><p>Project 03</p></a>
     </div>
-    <div class="skill">
-      <span>ILLUSTRATOR</span>
-      <div class="skill-bar"><div class="progress" style="width: 30%;">30%</div></div>
-    </div>
-    <div class="skill">
-    <span>JAVASCRIPT</span>
-     <div class="skill-bar"><div class="progress" style="width: 5%;">5%</div></div>
-    </div>
-    <div class="skill">
-    <span>HTML & CSS</span>
-    <div class="skill-bar"><div class="progress" style="width: 65%;">65%</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <section id="skills" class="section4">
+    <h1>03 SKILLS</h1>
+    <p>MY KNOWLEDGE LEVEL IN SOFTWARE</p>
 
-<section class="section5" >
-  <div class="about-container">
-    <div class="about-text">
-      <h1>ABOUT ME</h1>
-      <p>I'm Sheikh Faraz. I love traveling, exploring nature, and learning new things. I have a deep love for nature and trees, which is why my friends and I have planted over 2,000 trees so far.</p>
+    <div class="skills">
+      <div class="skill">
+        <span>PHOTOSHOP</span>
+        <div class="skill-bar"><div class="progress" style="width: 30%;">30%</div></div>
+      </div>
+      <div class="skill">
+        <span>ILLUSTRATOR</span>
+        <div class="skill-bar"><div class="progress" style="width: 30%;">30%</div></div>
+      </div>
+      <div class="skill">
+        <span>JAVASCRIPT</span>
+        <div class="skill-bar"><div class="progress" style="width: 5%;">5%</div></div>
+      </div>
+      <div class="skill">
+        <span>HTML & CSS</span>
+        <div class="skill-bar"><div class="progress" style="width: 65%;">65%</div></div>
+      </div>
     </div>
-    
-    <div class="image-grid">
-      <div class="image-item img1"><img src="img1.png (2).jpg" alt="Hunza Valley"></div>
-      <div class="image-item img2"><img src="img2.png.jpg" alt="Tree plantation work"></div>
-      <div class="image-item img3"><img src="img3.png.jpg" alt="hamushal lake"></div>
-      <div class="image-item img4"><img src="img4.png.jpg" alt="office"></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section5">
-  <h1>MY PASSIONS</h1>
-  <div class="passion-container">
-    <div class="passion-item">
-      <h3>Northern Explorer</h3>
-      <p>Hiking</p>
+  <section id="about" class="section5">
+    <div class="about-container">
+      <div class="about-text">
+        <h1>ABOUT ME</h1>
+        <p>I'm Sheikh Faraz. I love traveling, exploring nature, and learning new things. I have a deep love for nature and trees, which is why my friends and I have planted over 2,000 trees so far.</p>
+      </div>
+      
+      <div class="image-grid">
+        <div class="image-item img1"><img src="img1.png (2).jpg" alt="Hunza Valley"></div>
+        <div class="image-item img2"><img src="img2.png.jpg" alt="Tree plantation work"></div>
+        <div class="image-item img3"><img src="img3.png.jpg" alt="hamushal lake"></div>
+        <div class="image-item img4"><img src="img4.png.jpg" alt="office"></div>
+      </div>
     </div>
-    <div class="passion-item">
-      <h3> Plantation Worker</h3>
-      <p>Active in tree planting campaigns</p>
-    </div>
-    <div class="passion-item">
-      <h3>Nature Photography</h3>
-      <p>Documenting Pakistan's landscapes and plantation efforts</p>
-    </div>
-    <div class="passion-item">
-      <h3> Web Development</h3>
-      <p>Building projects</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer-container">
-  <p> © 2035 by Sheikh Faraz. Powered and secured by my pc</p>
-</footer>
+  <section class="section5">
+    <h1>MY PASSIONS</h1>
+    <div class="passion-container">
+      <div class="passion-item">
+        <h3>Northern Explorer</h3>
+        <p>Hiking</p>
+      </div>
+      <div class="passion-item">
+        <h3> Plantation Worker</h3>
+        <p>Active in tree planting campaigns</p>
+      </div>
+      <div class="passion-item">
+        <h3>Nature Photography</h3>
+        <p>Documenting Pakistan's landscapes and plantation efforts</p>
+      </div>
+      <div class="passion-item">
+        <h3> Web Development</h3>
+        <p>Building projects</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('active');
-}
-</script>
+  <footer class="footer-container">
+    <p> © 2035 by Sheikh Faraz. Powered and secured by my pc</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
